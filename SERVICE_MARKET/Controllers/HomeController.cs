@@ -15,24 +15,10 @@ namespace SERVICE_MARKET.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult CerrarSesion()
+        /*public ActionResult CerrarSesion()
         {
             Session["Usuario"] = null;
             return RedirectToAction("Login", "Acceso");
-        }
+        }*/
     }
 }

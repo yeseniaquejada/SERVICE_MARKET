@@ -1,1 +1,17 @@
-﻿
+﻿#logo {
+    width: 85px;
+    height: 60px;
+}
+
+.busquedad {
+    margin-left: 25px;
+}
+
+#carrito {
+    width:30px;
+    height:30px;
+}
+
+.item {
+    margin: 10px;
+}

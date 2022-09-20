@@ -4,45 +4,81 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/CSS/Layout.css" rel="stylesheet" />
     <title>@ViewBag.Title - Service Market</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="@Url.Action("Index", "Home")">
-                    <img src="~/Imagenes/logo derecha.png" width="95px" height="70px" />
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Salir", "CerrarSesion", "Home")</li>
-                </ul>
+
+<body class="p-0 m-0 border-0 bd-example">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img id="logo" src="~/Imagenes/logo derecha.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="busquedad form-control me-2" type="search" placeholder="Busca Servicios a tus necesidades" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
                 </form>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="item nav-link" href="@Url.Action("Registrar", "Acceso")">Crea tu cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item nav-link" href="@Url.Action("Login", "Acceso")">Ingresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hogar</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Construcción</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Moda</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Tecnología</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Jardín</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Asesoría</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Moda</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Mantenimiento</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Construcción</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Mensajería</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item nav-link" href="#">Mis compras</a>
+                    </li>
+                    <a class="item nav-link" href="#"><img id="carrito" src="~/Imagenes/carrito-de-compras.png"></a>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - Service Market</p>
         </footer>
     </div>
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
 </body>
 </html>
