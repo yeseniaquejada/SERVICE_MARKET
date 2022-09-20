@@ -97,9 +97,27 @@ namespace SERVICE_MARKET.Controllers
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 oUsuario.ID_USUARIO = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-            }
 
-            if (oUsuario.ID_USUARIO != 0)
+                /*LEER LOS ATRIBUTOS DEL OBJETO USUARIO*/
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oUsuario = new Usuario()
+                        {
+                            IDENTIFICACION_U = dr["IDENTIFICACION_U"].ToString(),
+                            NOMBRE = dr["NOMBRE"].ToString(),
+                            APELLIDOS = dr["APELLIDOS"].ToString(),
+                            CELULAR = dr["CELULAR"].ToString(),
+                            CORREO_ELECTRONICO = dr["CORREO_ELECTRONICO"].ToString(),
+                            CONTRASENA = dr["CONTRASENA"].ToString(),
+                            ID_ROL_FK = (Rol)dr["ID_ROL_fK"],
+                        };
+                    }
+                }
+            }
+            
+            if (oUsuario.ID_ROL_FK == Rol.ADMINISTRADOR)
             {
                 Session["Usuario"] = oUsuario;
                 return RedirectToAction("Index", "Home");

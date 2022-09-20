@@ -17,7 +17,7 @@ namespace SERVICE_MARKET.Models
         public string CONTRASENA { get; set; }
         public string CONFIRMAR_CONTRASENA { get; set; }
         public string FECHA_NACIMIENTO { get; set; }
-        public int ID_ROL_FK { get; set; }
+        public Rol ID_ROL_FK { get; set; }
 
     }
 }
