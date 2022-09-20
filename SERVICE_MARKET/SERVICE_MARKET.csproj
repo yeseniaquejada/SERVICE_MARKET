@@ -145,6 +145,7 @@
     <Content Include="Imagenes\carrito-de-compras.png" />
     <Content Include="Imagenes\logo abajo.png" />
     <Content Include="Imagenes\logo derecha.png" />
+    <Content Include="Imagenes\logo.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

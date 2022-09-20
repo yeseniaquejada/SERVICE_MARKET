@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></head>
 <body>
     <div class="sidenav">
-        <div class="login-main-text">
-            <center><img id="logo" src="~/Imagenes/logo abajo.png" width="300px" height="240px" /></center>
+        <div class="login-main-text"> 
+            <center><img id="logo" src="~/Imagenes/logo abajo.png" width="65%" height="40%" /></center>
             <br />
             <p>Inicia sesión o regístrate desde aquí para acceder</p>
         </div>
@@ -56,10 +56,15 @@
                 <div class="cuenta d-flex justify-content-center links">
                     No tienes una cuenta? <a href="@Url.Action("Registrar","Acceso")" class="ml-2">Registrarse</a>
                 </div>
-                <!--<div class="d-flex justify-content-center links">
-                        <a href="#">Forgot your password?</a>
-                     </div> -->
-            </div>
+                <br />
+                <div class="cuenta d-flex justify-content-center links">
+                    <a href="@Url.Action("Index","Home")" class="ml-2">Volver al incio</a>
+                </div>
+            <br /><br />
+            <!--<div class="d-flex justify-content-center links">
+            <a href="#">Forgot your password?</a>
+         </div> -->
+        </div>
         </div>
     </div>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

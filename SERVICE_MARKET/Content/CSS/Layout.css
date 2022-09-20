@@ -1,6 +1,11 @@
 ﻿#logo {
-    width: 85px;
-    height: 60px;
+    width: 115px;
+    height: 89px;
+}
+
+#service {
+    color:white;
+    font-size: 20px;
 }
 
 .busquedad {
