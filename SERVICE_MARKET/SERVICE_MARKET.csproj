@@ -119,6 +119,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Servicios.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,7 +147,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Imagenes\carrito-de-compras.png" />
     <Content Include="Imagenes\logo abajo.png" />
     <Content Include="Imagenes\logo derecha.png" />
     <Content Include="Imagenes\logo.png" />

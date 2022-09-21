@@ -117,10 +117,19 @@ namespace SERVICE_MARKET.Controllers
                 }
             }
             
-            if (oUsuario.ID_ROL_FK == Rol.ADMINISTRADOR)
+            if (oUsuario.ID_ROL_FK == Rol.PROVEEDOR)
             {
                 Session["Usuario"] = oUsuario;
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("IndexProveedor", "Proveedor");
+            }else if (oUsuario.ID_ROL_FK == Rol.ADMINISTRADOR)
+            {
+                Session["Usuario"] = oUsuario;
+                return RedirectToAction("IndexAdministrador", "Administrador");
+            }
+            else if (oUsuario.ID_ROL_FK == Rol.CLIENTE)
+            {
+                Session["Usuario"] = oUsuario;
+                return RedirectToAction("IndexCliente", "Cliente");
             }else
             {
                 ViewData["MENSAJE"] = "Usuario no encontrado";

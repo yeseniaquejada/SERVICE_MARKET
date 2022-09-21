@@ -14,6 +14,11 @@ namespace SERVICE_MARKET.Controllers
             return View();
         }
 
+        public ActionResult CrearPublicacion()
+        {
+            return View();
+        }
+
         public ActionResult CerrarSesion()
         {
             Session["Usuario"] = null;
