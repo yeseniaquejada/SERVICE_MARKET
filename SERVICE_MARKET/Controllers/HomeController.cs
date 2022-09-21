@@ -12,11 +12,5 @@ namespace SERVICE_MARKET.Controllers
         {
             return View();
         }
-
-        /*public ActionResult CerrarSesion()
-        {
-            Session["Usuario"] = null;
-            return RedirectToAction("Login", "Acceso");
-        }*/
     }
 }

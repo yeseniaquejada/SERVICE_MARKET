@@ -3,14 +3,11 @@
     height: 80px;
 }
 
-
 #service {
-    color:white;
-    font-size: 20px;
-}
-
-.busquedad {
-    margin-left: 25px;
+    color: #1b6bc2;
+    font-size: 35px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .item {

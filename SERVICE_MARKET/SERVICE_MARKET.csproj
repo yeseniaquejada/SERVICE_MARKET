@@ -111,7 +111,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
+    <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +140,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\CSS\Layout.css" />
+    <Content Include="Content\CSS\LayoutPerfiles.css" />
     <Content Include="Content\CSS\Login.css" />
     <Content Include="Content\CSS\Registrarse.css" />
     <Content Include="favicon.ico" />
@@ -201,9 +205,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Acceso\Login.cshtml" />
     <Content Include="Views\Acceso\Registrar.cshtml" />
+    <Content Include="Views\Shared\_Layout_Proveedor.cshtml" />
+    <Content Include="Views\Proveedor\IndexProveedor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Administrador\" />
+    <Folder Include="Views\Cliente\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
