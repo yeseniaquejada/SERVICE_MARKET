@@ -98,7 +98,7 @@ namespace SERVICE_MARKET.Controllers
                 cn.Open();
                 oUsuario.ID_USUARIO = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
-                /*LEER LOS ATRIBUTOS DEL OBJETO USUARIO*/
+                /*LEER ATRIBUTOS DEL OBJETO USUARIO*/
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
@@ -117,6 +117,7 @@ namespace SERVICE_MARKET.Controllers
                 }
             }
             
+            /*ACCESO A VISTAS SEGUN ROL*/
             if (oUsuario.ID_ROL_FK == Rol.PROVEEDOR)
             {
                 Session["Usuario"] = oUsuario;
