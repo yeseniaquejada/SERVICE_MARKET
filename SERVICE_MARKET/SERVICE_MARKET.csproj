@@ -151,6 +151,13 @@
     <Content Include="Imagenes\logo abajo.png" />
     <Content Include="Imagenes\logo derecha.png" />
     <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\Sin título-1.jpg" />
+    <Content Include="Imagenes\Sin título-2.jpg" />
+    <Content Include="Imagenes\Sin título-3.jpg" />
+    <Content Include="Imagenes\Sin título-4.jpg" />
+    <Content Include="Imagenes\Sin título-5.jpg" />
+    <Content Include="Imagenes\Sin título-6.jpg" />
+    <Content Include="Imagenes\Sin título-7.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
