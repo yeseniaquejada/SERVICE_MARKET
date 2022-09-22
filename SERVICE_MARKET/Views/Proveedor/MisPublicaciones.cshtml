@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SERVICE_MARKET.Models.Servicios>
+
+@{
+    ViewBag.Title = "MisPublicaciones";
+    Layout = "~/Views/Shared/_Layout_Proveedor.cshtml";
+}
+
+<style>
+    body {
+        margin-top: 150px;
+    }
+</style>
+<html>
+<body>
+    <a href="@Url.Action("CrearPublicacion")">Crear publicación nueva</a>
+    <br /><br />
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div  class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@item.IMAGEN" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.NOMBRE</h5>
+                        <h5 class="card-title">$@item.PRECIO</h5>
+                        <p class="card-text">@item.TERMINOS</p>
+                        <h5 class="card-title">Categoria: @item.NOMBRE_CAT</h5>
+                    </div>
+                </div>
+            </div>      
+            }
+        </div>
+    </div>
+</body>
+</html>

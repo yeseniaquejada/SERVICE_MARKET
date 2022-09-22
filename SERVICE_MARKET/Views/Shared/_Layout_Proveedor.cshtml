@@ -14,7 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
-<<nav class="navbar navbar-dark bg-dark fixed-top">
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
      <div class="container-fluid">
          <a class="navbar-brand" href="@Url.Action("IndexProveedor", "Proveedor")">
              <img id="logo" src="~/Imagenes/logo.png" />
@@ -35,10 +36,10 @@
                          <button class="btn btn-primary" type="submit">Buscar</button>
                      </form>
                      <li class="nav-item">
-                         <a class="item nav-link" aria-current="page" href="#">Mis publicaciones</a>
+                         <a class="item nav-link" aria-current="page" href="@Url.Action("MisPublicaciones", "Proveedor")">Mis publicaciones</a>
                      </li>
                      <li class="nav-item">
-                         <a class="item nav-link" aria-current="page" href="#">Crear publicación</a>
+                         <a class="item nav-link" aria-current="page" href="@Url.Action("CrearPublicacion", "Proveedor")">Crear publicación</a>
                      </li>
                      <li class="nav-item">
                          <a class="item nav-link" href="#">Servicios Disponibles</a>

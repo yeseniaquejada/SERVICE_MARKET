@@ -118,6 +118,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MantenimientoServicios.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Servicios.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -207,6 +208,8 @@
     <Content Include="Views\Acceso\Registrar.cshtml" />
     <Content Include="Views\Shared\_Layout_Proveedor.cshtml" />
     <Content Include="Views\Proveedor\IndexProveedor.cshtml" />
+    <Content Include="Views\Proveedor\MisPublicaciones.cshtml" />
+    <Content Include="Views\Proveedor\CrearPublicacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

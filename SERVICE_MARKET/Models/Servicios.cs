@@ -13,5 +13,6 @@ namespace SERVICE_MARKET.Models
         public decimal PRECIO { get; set; }
         public string TERMINOS { get; set; }
         public int ID_CATEGORIA_FK { get; set; }
+        public string NOMBRE_CAT { get; set; }
     }
 }
