@@ -148,9 +148,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\abogados.jpg" />
+    <Content Include="Imagenes\aseo.jpg" />
     <Content Include="Imagenes\logo abajo.png" />
     <Content Include="Imagenes\logo derecha.png" />
     <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\mariachis.jpg" />
+    <Content Include="Imagenes\niñera.jpg" />
+    <Content Include="Imagenes\plomeria.jpg" />
     <Content Include="Imagenes\Sin título-1.jpg" />
     <Content Include="Imagenes\Sin título-2.jpg" />
     <Content Include="Imagenes\Sin título-3.jpg" />
