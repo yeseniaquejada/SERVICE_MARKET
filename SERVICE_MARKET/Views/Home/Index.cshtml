@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Página principal";
 }
 <style>
     header {
@@ -9,17 +9,18 @@
         margin-top: 10px;
     }
     footer {
-        background-color: #0d6efd
+        background-color: #1c6cc4;
     }
 
         footer h4,
         a {
             margin: 15px;
-            color: white
+            color: white;
+            text-decoration:none;
         }
 
         footer p {
-            font-size: 2, 0rem;
+            font-size: 1rem;
             text-align: center;
             color: white
         }
@@ -189,32 +190,33 @@
         </div>
     </section>
     <br /><br />
-    <footer>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <h4>Servicio al cliente</h4>
-                    <a href="">Ayuda/PQR</a>
-                    <br><br>
-                    <a href="">Contáctanos</a>
-                </div>
-                <div class="col">
-                    <h4>Acerca de service market</h4>
-                    <a href="">Terminos y condiciones</a>
-                    <br><br>
-                    <h6>Yesenia Quejada <br>Rosemberg Gomez <br>Jose David Amaya</h6>
-                </div>
-                <div class="col">
-                    <h4>Síguenos</h4>
-                    <a href=""><img src="Imagenes/facebook.png" alt="">   Facebook</a>
-                    <br><br>
-                    <a href=""><img src="Imagenes/instagram.png" alt="">   Instagram</a>
-                    <br><br>
-                    <a href=""><img src="Imagenes/gorjeo.png" alt="">   Twitter</a>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <p>Copyright ©2022 Service Market</p>
-    </footer>
+          <footer class="p-0 m-0 border-0">
+              <div class="container text-center">
+                  <div class="row">
+                      <div class="col">
+                          <h4>Servicio al cliente</h4>
+                          <a href="">Ayuda/PQR</a>
+                          <br><br>
+                          <a href="">Contáctanos</a>
+                      </div>
+                      <div class="col">
+                          <h4>Acerca de service market</h4>
+                          <a href="">Terminos y condiciones</a>
+                          <br><br>
+                          <h6>Yesenia Quejada <br>Rosemberg Gomez <br>Jose David Amaya</h6>
+                      </div>
+                      <div class="col">
+                          <h4>Síguenos</h4>
+                          <a href=""><img src="Imagenes/facebook.png" alt="">   Facebook</a>
+                          <br><br>
+                          <a href=""><img src="Imagenes/instagram.png" alt="">   Instagram</a>
+                          <br><br>
+                          <a href=""><img src="Imagenes/gorjeo.png" alt="">   Twitter</a>
+                      </div>
+                  </div>
+              </div>
+              <br><br>
+              <p>&copy; @DateTime.Now.Year - Service Market</p>
+              <br><br>
+          </footer>
 </body>
