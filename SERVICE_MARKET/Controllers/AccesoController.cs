@@ -106,6 +106,7 @@ namespace SERVICE_MARKET.Controllers
                         oUsuario = new Usuario()
                         {
                             IDENTIFICACION_U = dr["IDENTIFICACION_U"].ToString(),
+                            TIPO_DOC = dr["TIPO_DOC"].ToString(),
                             NOMBRE = dr["NOMBRE"].ToString(),
                             APELLIDOS = dr["APELLIDOS"].ToString(),
                             CELULAR = dr["CELULAR"].ToString(),
@@ -118,24 +119,30 @@ namespace SERVICE_MARKET.Controllers
             }
             
             /*ACCESO A VISTAS SEGUN ROL*/
-            if (oUsuario.ID_ROL_FK == Rol.PROVEEDOR)
+            if (oUsuario.ID_USUARIO != 0)
             {
-                Session["Usuario"] = oUsuario;
-                return RedirectToAction("IndexProveedor", "Proveedor");
-            }else if (oUsuario.ID_ROL_FK == Rol.ADMINISTRADOR)
-            {
-                Session["Usuario"] = oUsuario;
-                return RedirectToAction("IndexAdministrador", "Administrador");
-            }
-            else if (oUsuario.ID_ROL_FK == Rol.CLIENTE)
-            {
-                Session["Usuario"] = oUsuario;
-                return RedirectToAction("IndexCliente", "Cliente");
-            }else
+                if (oUsuario.ID_ROL_FK == Rol.PROVEEDOR)
+                {
+                    Session["Usuario"] = oUsuario;
+                    return RedirectToAction("IndexProveedor", "Proveedor");
+                }
+                else if (oUsuario.ID_ROL_FK == Rol.ADMINISTRADOR)
+                {
+                    Session["Usuario"] = oUsuario;
+                    return RedirectToAction("IndexAdministrador", "Administrador");
+                }
+                else if (oUsuario.ID_ROL_FK == Rol.CLIENTE)
+                {
+                    Session["Usuario"] = oUsuario;
+                    return RedirectToAction("IndexCliente", "Cliente");
+                }
+            } 
+            else
             {
                 ViewData["MENSAJE"] = "Usuario no encontrado";
-                return View();
-            }      
+                
+            }
+            return View();
         }
 
         /*METODO ENCRIPTAR CONTRASEÑA*/
