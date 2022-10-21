@@ -51,7 +51,7 @@ namespace SERVICE_MARKET_APP.Controllers
             {
                 /*PROCEDIMIENTO ALMACENADO REGISTRAR USUARIO*/
                 SqlCommand cmd = new SqlCommand("REGISTRAR_USUARIO", cn);
-                cmd.Parameters.AddWithValue("IDENTIFICACION_U", oUsuarios.IDENTIFICACION_U);
+                cmd.Parameters.AddWithValue("N_IDENTIFICACION", oUsuarios.N_IDENTIFICACION);
                 cmd.Parameters.AddWithValue("TIPO_DOC", oUsuarios.TIPO_DOC);
                 cmd.Parameters.AddWithValue("NOMBRE", oUsuarios.NOMBRE.ToUpper());
                 cmd.Parameters.AddWithValue("APELLIDOS", oUsuarios.APELLIDOS.ToUpper());
@@ -102,7 +102,7 @@ namespace SERVICE_MARKET_APP.Controllers
                 cn.Open();
 
                 /*LEER ID DEL USUARIO (PRIMERA FILA)*/
-                oUsuarios.ID_USUARIO = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+                oUsuarios.IDENTIFICACION_U = cmd.ExecuteScalar().ToString();
 
                 /*LEER ATRIBUTOS DEL OBJETO USUARIO*/
                 using (SqlDataReader dr = cmd.ExecuteReader())
