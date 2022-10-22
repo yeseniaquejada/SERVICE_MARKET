@@ -151,3 +151,7 @@ C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\Proyecto__SENA\SERVICE_MARKET
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\Proyecto__SENA\SERVICE_MARKET\bin\roslyn\System.Memory.dll
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\Proyecto__SENA\SERVICE_MARKET\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\Proyecto__SENA\SERVICE_MARKET\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\SERVICE_MARKET\obj\Debug\SERVICE_MARKET.csproj.AssemblyReference.cache
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\SERVICE_MARKET\obj\Debug\SERVICE_MARKET.csproj.CoreCompileInputs.cache
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\SERVICE_MARKET\obj\Debug\SERVICE_MARKET.dll
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\SERVICE_MARKET\obj\Debug\SERVICE_MARKET.pdb
