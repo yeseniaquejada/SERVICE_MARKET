@@ -104,12 +104,12 @@ namespace Service_market_.Controllers
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
 
-                /*LEER ID DEL USUARIO (PRIMERA FILA)*/
+                /*LEER IDENTIFICACION DEL USUARIO (PRIMERA FILA)*/
                 oUsuarios.N_IDENTIFICACION = cmd.ExecuteScalar().ToString();
             }
 
-            /*ACCESO A VISTAS SEGUN ROL*/
-            if (oUsuarios.N_IDENTIFICACION != null)
+            /*ACCESO A VISTAS*/
+            if (oUsuarios.N_IDENTIFICACION != "0")
             {
                     Session["Usuario"] = oUsuarios;
                     return RedirectToAction("IndexCliente", "Cliente");

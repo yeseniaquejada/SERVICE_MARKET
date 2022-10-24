@@ -12,6 +12,7 @@ namespace SERVICE_MARKET.Models
         /*CADENA DE CONEXION*/
         static string cadena = "Data Source=LAPTOP-RMAAM810;Initial Catalog=SERVICE_MARKET;Integrated Security=True";
 
+        /*METODO PARA CREAR PUBLICACION*/
         public int CrearPublicacion(Servicios oServicios)
         {
             /*CONECTANDO BASE DE DATOS*/
