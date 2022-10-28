@@ -127,6 +127,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Ciudades.cs" />
+    <Compile Include="Models\MantenimientoServicios.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\Servicios.cs" />
     <Compile Include="Models\Usuario.cs" />
