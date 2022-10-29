@@ -11,9 +11,9 @@ namespace Service_market_.Models
         public string N_IDENTIFICACION { get; set; }
         public string FECHA_NACIMIENTO { get; set; }
         public string FECHA_EXPEDICION { get; set; }
-        public string NOMBRE { get; set; }
-        public string APELLIDOS { get; set; }
-        public string CELULAR { get; set; }
+        public string NOMBRE_USU { get; set; }
+        public string APELLIDOS_USU { get; set; }
+        public string CELULAR_USU { get; set; }
         public string GENERO { get; set; }
         public Ciudades ID_CIUDAD_FK { get; set; }
         public string DIRECCION { get; set; }

@@ -10,33 +10,22 @@ namespace Service_market_.Controllers
     public class ServiciosController : Controller
     {
         // GET: Servicios
-        public ActionResult MisPublicaciones()
-        {
-            MantenimientoServicios ma = new MantenimientoServicios();
-            return View(ma.RecuperarTodos());
-        }
 
-        public ActionResult CrearPublicacion()
+        ServiciosBL _bl = new ServiciosBL();
+
+       public ActionResult ServiciosConsultar()
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult CrearPublicacion(FormCollection collection)
+        public ActionResult ServiciosPublicar()
         {
-            MantenimientoServicios ma = new MantenimientoServicios();
-            Servicios serv = new Servicios
-            {
-                NOMBRE_CAT = collection["NOMBRE_CAT"],
-                IMAGEN = collection["IMAGEN"],
-                NOMBRE = collection["NOMBRE"],
-                PRECIO = Decimal.Parse(collection["PRECIO"].ToString()),
-                TERMINOS = collection["TERMINOS"],
-                ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"].ToString())
-            };
-
-            ma.Publicacion(serv);
-            return RedirectToAction("MisPublicaciones");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ServiciosPublicar(Servicios oServicios)
+        {
+            _bl.AgregarServicio(oServicios);
+            return RedirectToAction("ServiciosConsultar");
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Service_market_.Models
     public class Servicios
     {
         public int ID_SERVICIO { get; set; }
-        public string IMAGEN { get; set; }
-        public string NOMBRE { get; set; }
-        public decimal PRECIO { get; set; }
-        public string TERMINOS { get; set; }
+        public string IMAGEN_SER { get; set; }
+        public string NOMBRE_SER { get; set; }
+        public decimal PRECIO_SER { get; set; }
+        public string TERMINOS_SER { get; set; }
         public int ID_CATEGORIA_FK { get; set; }   
     }
 }

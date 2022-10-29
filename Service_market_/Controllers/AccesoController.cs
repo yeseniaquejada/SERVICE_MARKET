@@ -55,9 +55,9 @@ namespace Service_market_.Controllers
                 cmd.Parameters.AddWithValue("N_IDENTIFICACION", oUsuarios.N_IDENTIFICACION);
                 cmd.Parameters.AddWithValue("FECHA_NACIMIENTO", oUsuarios.FECHA_NACIMIENTO);
                 cmd.Parameters.AddWithValue("FECHA_EXPEDICION", oUsuarios.FECHA_EXPEDICION);
-                cmd.Parameters.AddWithValue("NOMBRE", oUsuarios.NOMBRE.ToUpper());
-                cmd.Parameters.AddWithValue("APELLIDOS", oUsuarios.APELLIDOS.ToUpper());
-                cmd.Parameters.AddWithValue("CELULAR", oUsuarios.CELULAR);
+                cmd.Parameters.AddWithValue("NOMBRE_USU", oUsuarios.NOMBRE_USU.ToUpper());
+                cmd.Parameters.AddWithValue("APELLIDOS_USU", oUsuarios.APELLIDOS_USU.ToUpper());
+                cmd.Parameters.AddWithValue("CELULAR_USU", oUsuarios.CELULAR_USU);
                 cmd.Parameters.AddWithValue("GENERO", oUsuarios.GENERO);
                 cmd.Parameters.AddWithValue("ID_CIUDAD_FK", oUsuarios.ID_CIUDAD_FK);
                 cmd.Parameters.AddWithValue("DIRECCION", oUsuarios.DIRECCION.ToUpper());
@@ -111,8 +111,8 @@ namespace Service_market_.Controllers
             /*ACCESO A VISTAS*/
             if (oUsuarios.N_IDENTIFICACION != "0")
             {
-                    Session["Usuario"] = oUsuarios;
-                    return RedirectToAction("IndexCliente", "Cliente");
+                Session["Usuario"] = oUsuarios;
+                return RedirectToAction("IndexCliente", "Cliente");
             }
             else
             {

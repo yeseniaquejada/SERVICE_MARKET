@@ -11,6 +11,12 @@ namespace Service_market_.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
+        public ActionResult HomeCP()
+        {
+            return View();
+        }
+
     }
 }
