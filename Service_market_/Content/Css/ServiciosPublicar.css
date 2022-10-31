@@ -1,5 +1,5 @@
 ﻿body {
-    margin-top: 100px;
+    margin-top: 150px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
     background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
@@ -15,6 +15,7 @@
     background-color: #1e2126 !important;
     padding: 40px;
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 label {
@@ -36,6 +37,32 @@ textarea {
 
 .btn, .a {
     color: white !important;
-    font-size: 20px;
-    height:50px;
+    font-size: 18px;
+    height:40px;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+    background-color: #1e2126 !important;
+}
+
+footer h4, a {
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    color: white
+}
+
+footer a:hover {
+    color: white
+}
+
+h6 {
+    color: white;
 }

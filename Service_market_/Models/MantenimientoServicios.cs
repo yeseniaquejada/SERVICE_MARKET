@@ -40,12 +40,11 @@ namespace Service_market_.Models
             while (reader.Read())
             {
                 Servicios oServicios = new Servicios();
-                oServicios.ID_SERVICIO = (int)reader.GetInt64(0);
-                oServicios.IMAGEN_SER = reader.GetString(1);
-                oServicios.NOMBRE_SER = reader.GetString(2);
-                oServicios.PRECIO_SER = reader.GetDecimal(3);
-                oServicios.TERMINOS_SER = reader.GetString(4);
-                oServicios.ID_CATEGORIA_FK = (int)reader.GetInt64(5);
+                oServicios.IMAGEN_SER = reader.GetString(0);
+                oServicios.NOMBRE_SER = reader.GetString(1);
+                oServicios.PRECIO_SER = reader.GetDecimal(2);
+                oServicios.TERMINOS_SER = reader.GetString(3);
+                oServicios.ID_CATEGORIA_FK = (int)reader.GetInt64(4);
                 lista.Add(oServicios);
             }
             cadena.Close();
