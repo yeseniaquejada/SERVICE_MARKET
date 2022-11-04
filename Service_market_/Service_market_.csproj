@@ -150,6 +150,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\bellezaCarousel.jpg" />
+    <Content Include="Imagenes\facebook.png" />
+    <Content Include="Imagenes\gorjeo.png" />
+    <Content Include="Imagenes\instagram.png" />
     <Content Include="Imagenes\Limpieza.jpg" />
     <Content Include="Imagenes\limpiezaCarousel.jpg" />
     <Content Include="Imagenes\mantenimientopcCarousel.jpg" />

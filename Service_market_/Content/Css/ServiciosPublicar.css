@@ -41,28 +41,3 @@ textarea {
     height:40px;
 }
 
-footer {
-    padding: 0px;
-    margin: 0px;
-    background-color: #1e2126 !important;
-}
-
-footer h4, a {
-    margin: 15px;
-    color: white;
-    text-decoration: none;
-}
-
-footer p {
-    font-size: 1rem;
-    text-align: center;
-    color: white
-}
-
-footer a:hover {
-    color: white
-}
-
-h6 {
-    color: white;
-}
