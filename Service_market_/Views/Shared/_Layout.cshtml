@@ -7,63 +7,100 @@
     <title>@ViewBag.Title - Service Market</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Css/Layout.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <img id="logo" src="~/Logos/logo.png" />
-            <a id="service" class="navbar-brand" href="@Url.Action("Index", "Home")">
-                Service Market
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú de navegación</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <header>
+        <nav class="navbar fixed-top navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <img id="logo" src="~/Logos/logo.png" />
+                <a id="service" class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    Service Market
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú de navegación</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <form class="d-flex" role="search">
+                                <input class="busquedad form-control me-2" type="search" placeholder="Busca Servicios" aria-label="Search">
+                                <button class="btn btn-primary" type="submit">Buscar</button>
+                            </form>
+                            <br />
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Registrar", "Acceso")">Crea tu cuenta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Login", "Acceso")">Ingresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Index", "Home")">Servicios Disponibles</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorías
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hogar</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item" href="#">Construcción</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item" href="#">Moda</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <form class="d-flex" role="search">
-                            <input class="busquedad form-control me-2" type="search" placeholder="Busca Servicios" aria-label="Search">
-                            <button class="btn btn-primary" type="submit">Buscar</button>
-                        </form>
-                        <br />
-                        <li class="nav-item">
-                            <a class="item nav-link" href="@Url.Action("Registrar", "Acceso")">Crea tu cuenta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="item nav-link" href="@Url.Action("Login", "Acceso")">Ingresa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="item nav-link" href="@Url.Action("Index", "Home")">Servicios Disponibles</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorías
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Hogar</a></li>
-                                <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="#">Construcción</a></li>
-                                <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="#">Moda</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="text-center">
+            <div class="row">
+                <div class="col">
+                    <h4>Servicio al cliente</h4>
+                    <a href="">Ayuda/PQR</a>
+                    <br><br>
+                    <a href="">Contáctanos</a>
+                </div>
+                <div class="col">
+                    <h4>Acerca de service market</h4>
+                    <a href="">Terminos y condiciones</a>
+                    <br><br>
+                    <h6>Yesenia Quejada <br>Rosemberg Gomez <br>Jose David Amaya</h6>
+                </div>
+                <div class="col">
+                    <h4>Síguenos</h4>
+                    <a href=""><img src="Imagenes/facebook.png" alt="">   Facebook</a>
+                    <br><br>
+                    <a href=""><img src="Imagenes/instagram.png" alt="">   Instagram</a>
+                    <br><br>
+                    <a href=""><img src="Imagenes/gorjeo.png" alt="">   Twitter</a>
                 </div>
             </div>
         </div>
-    </nav>
-
-    <section>
-        <div class="container body-content">
-            @RenderBody()
-        </div>
-    </section>
-
+        <br><br>
+        <p>&copy; @DateTime.Now.Year - Service Market</p>
+        <br><br>
+    </footer>
+   
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
