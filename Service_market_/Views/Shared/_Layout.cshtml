@@ -29,12 +29,12 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+                        <form class="d-flex" role="search">
+                            <input class="busquedad form-control me-2" type="search" placeholder="Busca Servicios" aria-label="Search">
+                            <button class="btn btn-primary" type="submit">Buscar</button>
+                        </form>
+                        <br />
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <form class="d-flex" role="search">
-                                <input class="busquedad form-control me-2" type="search" placeholder="Busca Servicios" aria-label="Search">
-                                <button class="btn btn-primary" type="submit">Buscar</button>
-                            </form>
-                            <br />
                             <li class="nav-item">
                                 <a class="item nav-link" href="@Url.Action("Registrar", "Acceso")">Crea tu cuenta</a>
                             </li>
@@ -45,15 +45,16 @@
                                 <a class="item nav-link" href="@Url.Action("Index", "Home")">Servicios Disponibles</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="item nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorías
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Hogar</a></li>
-                                    <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="#">Construcción</a></li>
-                                    <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" href="#">Moda</a></li>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -73,7 +74,7 @@
 
     <footer class="bg-dark">
         <div class="text-center">
-            <div class="row">
+            <div class="row m-4 p-4">
                 <div class="col">
                     <h4 class="link-light">Servicio al cliente</h4>
                     <br />
@@ -89,7 +90,7 @@
                     <a href="" class="text-decoration-none link-light">Terminos y condiciones</a>
                     <br><br><br><br>
                     <h5 class="link-light">Desarrolladoras</h5>
-                    <h6 class="link-light">Yesenia Quejada <br> Valentina Zapata Flórez</h6>
+                    <h6 class="link-light">Yesenia Quejada Rojas<br> Valentina Zapata Flórez</h6>
                 </div>
                 <div class="col">
                     <h4 class="link-light">Síguenos</h4>
