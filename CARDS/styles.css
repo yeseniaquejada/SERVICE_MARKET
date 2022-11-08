@@ -1,0 +1,11 @@
+.cards-wrapper{
+    display: flex;
+}
+
+.card{
+    margin: 0.4cm;
+    width: calc(90%/3);
+    border-color: black;
+    height: 30%;
+}
+
