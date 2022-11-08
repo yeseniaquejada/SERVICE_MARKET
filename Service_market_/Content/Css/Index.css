@@ -32,3 +32,30 @@
      background-color: #1e2126;
      border: none;
 }
+
+.cards-wrapper {
+    display: flex;
+}
+
+.card {
+    margin: 0.4cm;
+    width: calc(90%/3);
+    height: 30%;
+}
+
+.cards-wrapper img {
+    height: 250px;
+}
+
+.card-body h5 {
+    font-weight: bold;
+}
+
+.card-body button a {
+    color: white;
+    text-decoration: none;
+}
+
+.drop {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
