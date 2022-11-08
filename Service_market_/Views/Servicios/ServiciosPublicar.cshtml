@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "ServiciosPublicar";
+    ViewBag.Title = "Publicar servicios";
     Layout = "~/Views/Shared/Layout_CP.cshtml";
 }
 
@@ -18,11 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="p-0 m-0 border-0">
+<body>
     <section>
         <div class="publicacion">
             <h1 id="titulo">Nueva publicación</h1>
-
             <form action="@Url.Action("ServiciosPublicar")" method="post">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Imagen</label>
@@ -50,17 +49,16 @@
                     <select name="ID_CATEGORIA_FK" class="form-select" aria-label="Default select example" required>
                         <option selected>-----</option>
                         <option value="1">Mantenimiento</option>
-                        <option value="2">Trabajos domesticos</option>
-                        <option value="3">Remodelación</option>
-                        <option value="4">Albañilería</option>
-                        <option value="5">Salud y belleza</option>
+                        <option value="2">Trabajos domésticos</option>
+                        <option value="3">Remodelación y Albañilería</option>
+                        <option value="4">Salud y belleza</option>
                     </select>
                 </div>
                 <br />
                 <div class="buttons gap-3 d-flex">
                     <button class="btn btn-primary col-4" type="submit">Publicar</button>
                     <button class="btn btn-success col-4" type="button">
-                        <a class="a text-decoration-none" href="@Url.Action("Index")">Cancelar</a>
+                        <a class="a text-decoration-none" href="@Url.Action("","")">Cancelar</a>
                     </button>
                 </div>
             </form>

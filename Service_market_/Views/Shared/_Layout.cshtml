@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Service Market</title>
+    <link rel="shortcut icon" href="~/Logos/logo.png" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Css/Layout.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <img id="logo" src="~/Logos/logo.png" />
                 <a id="service" class="navbar-brand" href="@Url.Action("Index", "Home")">
@@ -44,18 +45,8 @@
                             <li class="nav-item">
                                 <a class="item nav-link" href="@Url.Action("Index", "Home")">Servicios Disponibles</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Categorías
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("", "")">Categorías</a>
                             </li>
                         </ul>
                     </div>

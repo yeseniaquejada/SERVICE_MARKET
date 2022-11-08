@@ -1,5 +1,8 @@
-﻿@{
-    ViewBag.Title = "Página principal";
+﻿
+@{
+    ViewBag.Title = "Servicios Disponibles";
+    Layout = "~/Views/Shared/Layout_CP.cshtml";
+    var ListaServicios = ViewBag.ListaServicios;
 }
 <!DOCTYPE html>
 <html>
@@ -9,11 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Service Market</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Css/Index.css" rel="stylesheet" />
+    <link href="~/Content/Css/ServiciosConsultar.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <section id="carouselIndex">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -69,10 +73,27 @@
     </section>
 
     <section>
-        
+        <h1 class="titulo">Servicios Disponibles</h1>
+        @foreach (var s in ListaServicios)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="@s.IMAGEN_SER" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@s.NOMBRE_SER</h5>
+                    <p class="card-text">@s.TERMINOS_SER</p>
+                    <h6 class="card-title">$ @s.PRECIO_SER</h6>
+                    <h6 class="card-title">@s.ID_CATEGORIA_FK</h6>
+                    <button type="button" class="btn btn-primary">Más información</button>
+                </div>
+            </div>
+        }
+
     </section>
-    
+
+
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+
+

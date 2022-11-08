@@ -9,13 +9,14 @@
     color: white;
     text-align: center;
     font-size: 40px;
+    font-weight: bold;
 }
 
 .publicacion {
-    background-color: #1e2126 !important;
+    background-color: rgba(30, 33, 38, 0.9);
+    margin: 20px;
     padding: 40px;
     border-radius: 20px;
-    margin-bottom: 40px;
 }
 
 label {

@@ -15,6 +15,7 @@ namespace Service_market_.Controllers
 
        public ActionResult ServiciosConsultar()
         {
+            ViewBag.ListaServicios = _bl.ConsultarServicios().ToList();
             return View();
         }
         public ActionResult ServiciosPublicar()
