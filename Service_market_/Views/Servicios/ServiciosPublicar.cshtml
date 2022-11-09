@@ -22,11 +22,11 @@
     <section>
         <div class="publicacion">
             <h1 id="titulo">Nueva publicación</h1>
-            <form action="@Url.Action("ServiciosPublicar")" method="post">
-                <div class="mb-3">
+            <form action="@Url.Action("ServiciosPublicar")" method="post" new { enctype = "multipart/form-data" }>
+                 <div class="mb-3">
                     <label for="formFile" class="form-label">Imagen</label>
-                    <input name="IMAGEN_SER" class="form-control" type="file" id="formFile" required>
-                </div>
+                    <input name="ImageFile" class="form-control" type="file" id="formFile" required>
+                 </div>
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre del servicio</label>
@@ -58,7 +58,7 @@
                 <div class="buttons gap-3 d-flex">
                     <button class="btn btn-primary col-4" type="submit">Publicar</button>
                     <button class="btn btn-success col-4" type="button">
-                        <a class="a text-decoration-none" href="@Url.Action("","")">Cancelar</a>
+                        <a class="a text-decoration-none" href="@Url.Action("ServiciosConsultar","Servicios")">Cancelar</a>
                     </button>
                 </div>
             </form>

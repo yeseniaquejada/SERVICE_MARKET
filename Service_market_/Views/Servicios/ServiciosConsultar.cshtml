@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Servicios Disponibles";
     Layout = "~/Views/Shared/Layout_CP.cshtml";
     var ListaServicios = ViewBag.ListaServicios;
@@ -32,7 +31,6 @@
                     <img src="~/Imagenes/limpiezaCarousel.jpg" class="img d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Servicios de trabajos domésticos</h5>
-                        <p>Aseo especializado en conjuntos residenciales, áreas comunes, empresas, oficinas, locales comerciales, edificios empresariales, establecimientos de interés sanitario (gimnasios, ips, consultorios, veterinarias, entre otros) y hogares.</p>
                         <button type="button" class="btn btn-primary">Ver categoría</button>
                     </div>
                 </div>
@@ -40,7 +38,6 @@
                     <img src="~/Imagenes/remodelacionCarousel.jpg" class="img d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Servicios de remodelación y albañilería</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
                         <button type="button" class="btn btn-primary">Ver categoría</button>
                     </div>
                 </div>
@@ -48,7 +45,6 @@
                     <img src="~/Imagenes/mantenimientopcCarousel.jpg" class="img d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Servicios de mantenimiento</h5>
-                        <p>Mantenimiento para tus equipos tecnológicos como lo son limpieza, reparación ,general, preventivo, etc.</p>
                         <button type="button" class="btn btn-primary">Ver categoría</button>
                     </div>
                 </div>
@@ -56,7 +52,6 @@
                     <img src="~/Imagenes/bellezaCarousel.jpg" class="img d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Servicios de salud y belleza</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
                         <button type="button" class="btn btn-primary">Ver categoría</button>
                     </div>
                 </div>
@@ -76,14 +71,16 @@
         <h1 class="titulo">Servicios Disponibles</h1>
         @foreach (var s in ListaServicios)
         {
-            <div class="card" style="width: 18rem;">
-                <img src="@s.IMAGEN_SER" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">@s.NOMBRE_SER</h5>
-                    <p class="card-text">@s.TERMINOS_SER</p>
-                    <h6 class="card-title">$ @s.PRECIO_SER</h6>
-                    <h6 class="card-title">@s.ID_CATEGORIA_FK</h6>
-                    <button type="button" class="btn btn-primary">Más información</button>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@s.IMAGEN_SER" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@s.NOMBRE_SER</h5>
+                        <p class="card-text">@s.TERMINOS_SER</p>
+                        <h6 class="card-title">$ @s.PRECIO_SER</h6>
+                        <h6 class="card-title">@s.ID_CATEGORIA_FK</h6>
+                        <button type="button" class="btn btn-primary">Más información</button>
+                    </div>
                 </div>
             </div>
         }

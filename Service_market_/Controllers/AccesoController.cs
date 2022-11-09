@@ -112,13 +112,20 @@ namespace Service_market_.Controllers
             if (oUsuarios.N_IDENTIFICACION != "0")
             {
                 Session["Usuario"] = oUsuarios;
-                return RedirectToAction("IndexCliente", "Cliente");
+                return RedirectToAction("ServiciosConsultar", "Servicios");
             }
             else
             {
                 ViewData["MENSAJE"] = "Usuario no encontrado";
             }
             return View();
+        }
+
+        /*METODO PARA CERRAR SESION*/
+        public ActionResult CerrarSesion()
+        {
+            Session["Usuario"] = null;
+            return RedirectToAction("Index", "Home");
         }
 
         /*METODO ENCRIPTAR CONTRASEÑA*/

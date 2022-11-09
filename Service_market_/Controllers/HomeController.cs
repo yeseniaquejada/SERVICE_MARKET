@@ -13,10 +13,5 @@ namespace Service_market_.Controllers
             return View();
 
         }
-        public ActionResult HomeCP()
-        {
-            return View();
-        }
-
     }
 }

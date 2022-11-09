@@ -44,7 +44,7 @@ namespace Service_market_.Models
                 oServicios.NOMBRE_SER = reader.GetString(1);
                 oServicios.PRECIO_SER = reader.GetDecimal(2);
                 oServicios.TERMINOS_SER = reader.GetString(3);
-                oServicios.ID_CATEGORIA_FK = (int)reader.GetInt64(4);
+                oServicios.NOMBRE_CAT = reader.GetString(4);
                 lista.Add(oServicios);
             }
             cadena.Close();

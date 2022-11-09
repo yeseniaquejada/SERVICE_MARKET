@@ -132,3 +132,7 @@ C:\Users\Erika\Desktop\SERVICE_MARKET\Service_market_\obj\Debug\Service_market_.
 C:\Users\Erika\Desktop\SERVICE_MARKET\Service_market_\obj\Debug\Service_market_.csproj.CopyComplete
 C:\Users\Erika\Desktop\SERVICE_MARKET\Service_market_\obj\Debug\Service_market_.dll
 C:\Users\Erika\Desktop\SERVICE_MARKET\Service_market_\obj\Debug\Service_market_.pdb
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\Service_market_\bin\EntityFramework.dll
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\Service_market_\bin\EntityFramework.SqlServer.dll
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\Service_market_\bin\EntityFramework.xml
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\Service_market_\bin\EntityFramework.SqlServer.xml

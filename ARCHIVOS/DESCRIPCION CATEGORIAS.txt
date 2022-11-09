@@ -1,0 +1,27 @@
+1-MANTENIMIENTO
+ORIENTADA A SOLUCIONAR Y PREVENIR LAS POSIBLES AVERÍAS QUE PUEDA HABER EN EQUIPOS, MÁQUINAS E INSTALACIONES PARA CONSERVAR Y GARANTIZAR SU ÓPTIMO FUNCIONAMIENTO.
+
+2-TRABAJOS DOMESTICOS
+TODA LA AYUDA DOMÉSTICA QUE NECESITAS EN CASA CON EXPERTAS EN ORDEN, LIMPIEZA Y DESINFECCIÓN.
+
+3-REMODELACION Y ALBAÑILERIA
+ORIENTADA EN LA CONSTRUCCION, RENOVACION Y REPARACION DE ESTRUCTURAS, PAREDES, MUROS, PARTES DE EDIFICIOS, CASAS Y MÁS.
+
+4-SALUD Y BELLEZA
+ORIENTADA A LA PRESTACIÓN DE SERVICIOS DESDE LOS DIFERENTES CAMPOS DE LA SALUD Y LA BELLEZA COMO LO SON CORTES, PEINADOS, MAQUILLAJES, MANICURE, PEDICURA, MASAJES, ETC.
+
+Incluye: Limpieza de áreas comunes, Limpieza de cocina, Limpieza de cocina, Limpieza de habitaciones, Lavado y secado de ropa, Planchado y doblado de ropa
+
+/*CARGAR Y MOSTRAR IMAGEN*/
+            string fileName = Path.GetFileNameWithoutExtension(oServicios.ImageFile.FileName);
+            string extension = Path.GetExtension(oServicios.ImageFile.FileName);
+            fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+            oServicios.IMAGEN_SER = "~/Image/" + fileName;
+            fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
+            oServicios.ImageFile.SaveAs(fileName);
+            using (SERVICIOS db = new SERVICIOS())
+            {
+                db.SERVICIOS.Add(oServicios);
+                db.SaveChanges();
+            }
+            ModelState.Clear();

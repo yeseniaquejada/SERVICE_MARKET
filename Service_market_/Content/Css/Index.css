@@ -59,3 +59,11 @@
 .drop {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
 }
+
+.titulo {
+    margin-top: 20px;
+    color: #1b6bc2;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}

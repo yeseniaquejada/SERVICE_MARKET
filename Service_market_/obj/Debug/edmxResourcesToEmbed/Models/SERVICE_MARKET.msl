@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICE_MARKETModelStoreContainer" CdmEntityContainer="SERVICE_MARKET_MODELS">
+    <EntitySetMapping Name="SERVICIOS">
+      <EntityTypeMapping TypeName="SERVICE_MARKETModel.SERVICIOS">
+        <MappingFragment StoreEntitySet="SERVICIOS">
+          <ScalarProperty Name="ID_SERVICIO" ColumnName="ID_SERVICIO" />
+          <ScalarProperty Name="IMAGEN_SER" ColumnName="IMAGEN_SER" />
+          <ScalarProperty Name="NOMBRE_SER" ColumnName="NOMBRE_SER" />
+          <ScalarProperty Name="PRECIO_SER" ColumnName="PRECIO_SER" />
+          <ScalarProperty Name="TERMINOS_SER" ColumnName="TERMINOS_SER" />
+          <ScalarProperty Name="ID_CATEGORIA_FK" ColumnName="ID_CATEGORIA_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
