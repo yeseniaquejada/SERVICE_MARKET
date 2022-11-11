@@ -49,9 +49,8 @@ namespace SERVICE_MARKET.Models
                         IMAGEN = registros["IMAGEN"].ToString(),
                         NOMBRE = registros["NOMBRE"].ToString(),
                         PRECIO = Decimal.Parse(registros["PRECIO"].ToString()),
-                        TERMINOS = registros["TERMINOS"].ToString(),
-                        ID_CATEGORIA_FK = int.Parse(registros["ID_CATEGORIA_FK"].ToString()),
-                        NOMBRE_CAT = registros["NOMBRE_CAT"].ToString()
+                        TERMINOS = registros["TERMINO_SER"].ToString(),
+                        NOMBRE_CAT = registros["NOMBRE"].ToString()
                     };
                     servicios.Add(serv);
                 }

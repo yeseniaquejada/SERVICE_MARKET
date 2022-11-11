@@ -69,24 +69,27 @@
 
     <section>
         <h1 class="titulo">Servicios Disponibles</h1>
-        @foreach (var s in ListaServicios)
-        {
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="@s.IMAGEN_SER" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">@s.NOMBRE_SER</h5>
-                        <p class="card-text">@s.TERMINOS_SER</p>
-                        <h6 class="card-title">$ @s.PRECIO_SER</h6>
-                        <h6 class="card-title">@s.ID_CATEGORIA_FK</h6>
-                        <button type="button" class="btn btn-primary">Más información</button>
+        <div class="container">
+            <div class="row">
+                @foreach (var s in ListaServicios)
+                {
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="@s.IMAGEN_SER" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@s.NOMBRE_SER</h5>
+                                <p class="card-text">@s.TERMINOS_SER</p>
+                                <h6 class="card-title">$ @s.PRECIO_SER</h6>
+                                <h6 class="card-title">@s.NOMBRE_CAT</h6>
+                                <button type="button" class="btn btn-primary">Más información</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
-        }
-
+        </div>
+ 
     </section>
-
 
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>

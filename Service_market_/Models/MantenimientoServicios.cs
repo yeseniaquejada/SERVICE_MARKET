@@ -32,11 +32,10 @@ namespace Service_market_.Models
         public List<Servicios> ConsultarServicios()
         {
             cadena.Open();
-            SqlCommand Comand = new SqlCommand("CONSULTAR_PUBLICACION", cadena as SqlConnection);
+            SqlCommand Comand = new SqlCommand("CONSULTAR_SERVICIOS", cadena as SqlConnection);
             Comand.CommandType = CommandType.StoredProcedure;
             IDataReader reader = Comand.ExecuteReader();
             List<Servicios> lista = new List<Servicios>();
-
             while (reader.Read())
             {
                 Servicios oServicios = new Servicios();
