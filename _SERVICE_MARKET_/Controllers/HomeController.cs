@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _SERVICE_MARKET_.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace _SERVICE_MARKET_.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            MantenimientoServicios ma = new MantenimientoServicios();
+            return View(ma.ConsultarServicios());
         }
     }
 }
