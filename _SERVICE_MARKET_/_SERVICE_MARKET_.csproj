@@ -167,6 +167,7 @@
     <Content Include="Imagenes\salud.jpg" />
     <Content Include="Imagenes\saludCarousel.jpg" />
     <Content Include="Imagenes\Trabajo-domestico.jpg" />
+    <Content Include="Imagenes\usuario.png" />
     <Content Include="Logos\logo abajo.png" />
     <Content Include="Logos\logo derecha.png" />
     <Content Include="Logos\logo.png" />
