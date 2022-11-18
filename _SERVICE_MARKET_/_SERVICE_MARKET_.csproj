@@ -202,9 +202,10 @@
     <Content Include="Views\Acceso\Login.cshtml" />
     <Content Include="Views\Acceso\Registrar.cshtml" />
     <Content Include="Views\Shared\Layout_CP.cshtml" />
-    <Content Include="Views\Servicios\IndexUsuarios.cshtml" />
     <Content Include="Views\Servicios\Publicar.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Servicios\IndexUsuarios.cshtml" />
+    <Content Include="Views\Servicios\ServiciosDisponibles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

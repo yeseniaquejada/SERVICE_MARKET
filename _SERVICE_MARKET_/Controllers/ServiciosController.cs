@@ -1,6 +1,7 @@
 ﻿using _SERVICE_MARKET_.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +12,10 @@ namespace _SERVICE_MARKET_.Controllers
     {
         // GET: Servicios
         public ActionResult IndexUsuarios()
+        {
+            return View();
+        }
+        public ActionResult ServiciosDisponibles()
         {
             MantenimientoServicios ma = new MantenimientoServicios();
             return View(ma.ConsultarServicios());
@@ -26,13 +31,12 @@ namespace _SERVICE_MARKET_.Controllers
         [HttpPost]
         public ActionResult Publicar(FormCollection collection)
         {
-
             MantenimientoServicios ma = new MantenimientoServicios();
             Servicio oServicios = new Servicio
             {
-                IMAGEN_SER = collection["IMAGEN_SER"],
                 NOMBRE_SER = collection["NOMBRE_SER"],
                 PRECIO_SER = decimal.Parse(collection["PRECIO_SER"].ToString()),
+                DESCRIPCION_BREVE = collection["DESCRIPCION_BREVE"],
                 TERMINOS_SER = collection["TERMINOS_SER"],
                 ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"])
             };

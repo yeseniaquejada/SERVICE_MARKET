@@ -25,11 +25,6 @@
             <h1 id="titulo">Nueva publicación</h1>
             <form action="@Url.Action("Publicar")" method="post">
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Imagen</label>
-                    <input name="IMAGEN_SER" class="form-control" type="text" id="formFile" required>
-                </div>
-
-                <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre del servicio</label>
                     <input name="NOMBRE_SER" type="text" class="form-control" id="formGroupExampleInput" placeholder="Escriba el nombre del servicio" required>
                 </div>
@@ -38,6 +33,11 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text">$</span>
                     <input name="PRECIO_SER" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Digite el precio" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripción breve</label>
+                    <textarea name="DESCRIPCION_BREVE" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba una descripción breve sobre el servicio ofrecido" required></textarea>
                 </div>
 
                 <div class="mb-3">

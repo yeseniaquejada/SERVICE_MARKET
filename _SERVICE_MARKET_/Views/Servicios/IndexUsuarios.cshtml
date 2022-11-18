@@ -70,29 +70,6 @@
     </section>
 
     <section>
-        <h1 class="titulo">Servicios Disponibles</h1>
-        <div class="container">
-            <div class="row">
-                @foreach (var item in Model)
-                {
-                    <div class="col-lg-4">
-                        <div class="card-servicios card text-light bg-dark drop" style="width: 18rem;">
-                            <img src="@Html.DisplayFor(modelItem => item.IMAGEN_SER)" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
-                                <p class="card-text">@Html.DisplayFor(modelItem => item.TERMINOS_SER)</p>
-                                <h4 class="card-title">$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h4>
-                                <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
-                                <button type="button" class="btn btn-primary">Más información</button>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
-    </section>
-
-    <section>
         <h1 class="titulo">Categorías</h1>
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
