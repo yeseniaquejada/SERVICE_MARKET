@@ -209,6 +209,7 @@
     <Content Include="Views\Servicios\IndexUsuarios.cshtml" />
     <Content Include="Views\Servicios\ServiciosDisponibles.cshtml" />
     <Content Include="Views\Home\preguntasFrecuentes.cshtml" />
+    <Content Include="Views\Home\PQR.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
