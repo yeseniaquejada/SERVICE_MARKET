@@ -1,0 +1,37 @@
+#uno{
+    
+    background-color: rgb(227, 227, 250);
+    
+}
+.form-control{
+    
+    border-color: rgb(167, 185, 236);
+}
+.form-select{
+    border-color: rgb(167, 185, 236);
+}
+
+.center{
+
+height:800px;
+margin-top:-207px;
+margin-left:630px ;
+
+}
+.contenedor{
+    margin-left: 90px;
+}
+
+.validacion{
+ position:relative;
+ margin-left:38%;
+ height:800px;
+margin-top:-460px;
+}
+.campo{
+    margin-top:-580px;
+    margin-left:82px;
+    overflow: hidden;
+    resize: none;
+    
+}
