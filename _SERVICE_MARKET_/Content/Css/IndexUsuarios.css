@@ -4,7 +4,7 @@
 }
 
 .img-carousel {
-    height: 70vh;
+    height: 65vh;
     max-width: 100%;
     object-fit: cover;
 }
@@ -63,7 +63,7 @@
 .titulo {
     margin-top: 20px;
     color: #1b6bc2;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
 }

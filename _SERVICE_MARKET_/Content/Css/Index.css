@@ -4,7 +4,7 @@
 }
 
 .img-carousel {
-    height: 55vh;
+    height: 65vh;
     max-width: 100%;
     object-fit: cover;
 }
@@ -25,7 +25,7 @@
 
 .mensaje-carousel button {
     border: none;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 .mensaje-carousel button:hover {
@@ -41,10 +41,6 @@
     margin: 0.4cm;
     width: calc(90%/3);
     height: 30%;
-}
-
-.carousel-categorias img {
-    height: 250px;
 }
 
 .informacion-card h5 {
@@ -63,7 +59,7 @@
 .titulo {
     margin-top: 20px;
     color: #1b6bc2;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
 }
@@ -151,23 +147,28 @@
     background-color: white;
 }
 
-.preguntas {
-    margin-top: 5%;
-    margin-bottom: 5%;
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.acordion h2 button{
-    color: black;
-    font-size:22px;
+.swal-modal {
+    background-color: #1e2126;
 }
 
-.accordion-body h2 {
+.swal-title {
     color: #1b6bc2;
-    font-weight: bold;
-    font-size: 22px;
+    font-size: 35px;
 }
 
-.accordion-body p {
-    color: black;
+.swal-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.swal-button {
+    border-radius: 2px;
+    background-color: #1b6bc2;
     font-size: 18px;
+    border: none;
 }

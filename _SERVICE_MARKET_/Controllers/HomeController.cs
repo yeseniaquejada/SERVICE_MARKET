@@ -14,5 +14,15 @@ namespace _SERVICE_MARKET_.Controllers
             MantenimientoServicios ma = new MantenimientoServicios();
             return View(ma.ConsultarServicios());
         }
+
+        public ActionResult preguntasFrecuentes()
+        {
+            return View();
+        }
+
+        public ActionResult PQR()
+        {
+            return View();
+        }
     }
 }
