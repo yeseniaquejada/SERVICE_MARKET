@@ -23,51 +23,6 @@
         font-size: 20px;
     }
 
-    .mensaje-carousel button {
-        border: none;
-        transition: background-color .5s;
-    }
-
-        .mensaje-carousel button:hover {
-            background-color: #1e2126;
-            border: none;
-        }
-
-.carousel-categorias {
-    display: flex;
-}
-
-.card-categorias {
-    margin: 0.4cm;
-    width: calc(90%/3);
-    height: 30%;
-}
-
-.carousel-categorias img {
-    height: 250px;
-}
-
-.informacion-card h5 {
-    font-weight: bold;
-}
-
-.informacion-card button a {
-    color: white;
-    text-decoration: none;
-}
-
-.drop {
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
-}
-
-.titulo {
-    margin-top: 20px;
-    color: #1b6bc2;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-}
-
 .card-servicios {
     margin-top: 15px;
 }
@@ -80,6 +35,7 @@
 
     .card-servicios h6 {
         font-weight: bold;
+        text-align: center;
         font-size: 18px;
     }
 
@@ -88,8 +44,18 @@
         transform: translateX(50%);
     }
 
+
+.titulo {
+    margin-top: 20px;
+    color: #1b6bc2;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .testimonios {
     margin-top: 5%;
+    margin-bottom: 8%;
 }
 
 .informacion-tes {
@@ -150,24 +116,3 @@
     .indicadores .active {
         background-color: white;
     }
-
-.preguntas {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.acordion h2 button {
-    color: black;
-    font-size: 22px;
-}
-
-.accordion-body h2 {
-    color: #1b6bc2;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.accordion-body p {
-    color: black;
-    font-size: 18px;
-}

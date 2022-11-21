@@ -143,8 +143,10 @@
     <Content Include="Content\Css\Index.css" />
     <Content Include="Content\Css\Layout.css" />
     <Content Include="Content\Css\IndexUsuarios.css" />
+    <Content Include="Content\Css\PQR.css" />
     <Content Include="Content\Css\preguntasFrecuentes.css" />
     <Content Include="Content\Css\Publicar.css" />
+    <Content Include="Content\Css\ServiciosDisponibles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -210,6 +212,9 @@
     <Content Include="Views\Servicios\ServiciosDisponibles.cshtml" />
     <Content Include="Views\Home\preguntasFrecuentes.cshtml" />
     <Content Include="Views\Home\PQR.cshtml" />
+    <Content Include="Views\Servicios\preguntasFrecuentes.cshtml" />
+    <Content Include="Views\Servicios\PQR.cshtml" />
+    <Content Include="Views\Servicios\informacionPublicaciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

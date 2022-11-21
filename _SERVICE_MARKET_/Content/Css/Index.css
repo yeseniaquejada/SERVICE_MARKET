@@ -14,24 +14,14 @@
     border-radius: 30px;
 }
 
-.mensaje-carousel h5 {
-    font-size: 35px;
-    font-weight: bold;
-}
+    .mensaje-carousel h5 {
+        font-size: 35px;
+        font-weight: bold;
+    }
 
-.mensaje-carousel p {
-    font-size: 20px;
-}
-
-.mensaje-carousel button {
-    border: none;
-    transition: background-color .3s;
-}
-
-.mensaje-carousel button:hover {
-    background-color: #1e2126;
-    border: none;
-}
+    .mensaje-carousel p {
+        font-size: 20px;
+    }
 
 .carousel-categorias {
     display: flex;
@@ -66,9 +56,32 @@
 
 .card-servicios {
     margin-top: 15px;
+    height: 310px;
 }
 
-.card-servicios h5{
+.botonInfo {
+    margin-bottom: 5px;
+}
+
+.info {
+    overflow-y: scroll;
+}
+
+    .info::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .info::-webkit-scrollbar-track {
+        background: #3C4149;
+        border-radius: 50px
+    }
+
+    .info::-webkit-scrollbar-thumb {
+        background: #50565F;
+        border-radius: 50px;
+    }
+
+.card-servicios h5 {
     font-weight: bold;
     text-align: center;
     font-size: 25px;
@@ -76,16 +89,18 @@
 
 .card-servicios h6 {
     font-weight: bold;
+    text-align: center;
     font-size: 18px;
 }
 
 .card-servicios button {
     margin-top: 15px;
-    transform: translateX(50%);
+    transform: translateX(70%);
 }
 
 .testimonios {
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .informacion-tes {
@@ -99,15 +114,15 @@
     border-radius: 30px;
 }
 
-.informacion-tes h2 {
-    font-size: 25px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
+    .informacion-tes h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
 
-.informacion-tes p {
-    font-size: 18px;
-}
+    .informacion-tes p {
+        font-size: 18px;
+    }
 
 .single-box {
     position: relative;
@@ -126,9 +141,9 @@
     border-radius: 50%;
 }
 
-.img-area img {
-    width: 100%;
-}
+    .img-area img {
+        width: 100%;
+    }
 
 .indicadores {
     left: 0;
@@ -136,16 +151,16 @@
     bottom: -70px;
 }
 
-.indicadores li {
-    background: #000;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-}
+    .indicadores li {
+        background: #000;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
 
-.indicadores .active {
-    background-color: white;
-}
+    .indicadores .active {
+        background-color: white;
+    }
 
 .swal-overlay {
     background-color: rgba(0, 0, 0, 0.8);

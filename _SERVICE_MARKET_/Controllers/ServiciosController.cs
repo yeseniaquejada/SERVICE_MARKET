@@ -19,7 +19,6 @@ namespace _SERVICE_MARKET_.Controllers
         {
             MantenimientoServicios ma = new MantenimientoServicios();
             return View(ma.ConsultarServicios());
-
         }
 
         public ActionResult Publicar()
@@ -34,6 +33,7 @@ namespace _SERVICE_MARKET_.Controllers
             MantenimientoServicios ma = new MantenimientoServicios();
             Servicio oServicios = new Servicio
             {
+                ID_SERVICIO = int.Parse(collection["ID_SERVICIO"].ToString()),
                 NOMBRE_SER = collection["NOMBRE_SER"],
                 PRECIO_SER = decimal.Parse(collection["PRECIO_SER"].ToString()),
                 DESCRIPCION_BREVE = collection["DESCRIPCION_BREVE"],
@@ -41,7 +41,24 @@ namespace _SERVICE_MARKET_.Controllers
                 ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"])
             };
             ma.AgregarServicio(oServicios);
-            return RedirectToAction("IndexUsuarios");
+            return RedirectToAction("ServiciosDisponibles");
+        }
+
+        public ActionResult preguntasFrecuentes()
+        {
+            return View();
+        }
+
+        public ActionResult PQR()
+        {
+            return View();
+        }
+
+        public ActionResult informacionPublicaciones(int ID)
+        {
+            MantenimientoServicios ma = new MantenimientoServicios();
+            Servicio ser = ma.Informacion_Servicios(ID);
+            return View(ser);
         }
     }
 }

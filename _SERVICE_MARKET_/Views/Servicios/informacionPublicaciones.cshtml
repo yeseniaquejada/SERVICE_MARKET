@@ -1,0 +1,99 @@
+﻿@model _SERVICE_MARKET_.Models.Servicio
+
+@{
+    ViewBag.Title = "informacionPublicaciones";
+    Layout = "~/Views/Shared/Layout_CP.cshtml";
+}
+
+<h2>informacionPublicaciones</h2>
+
+<div>
+    <h4>Servicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_SER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_SER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_SER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_SER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_BREVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION_BREVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERMINOS_SER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERMINOS_SER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_CAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_CAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_USU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_USU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDOS_USU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDOS_USU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CELULAR_USU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CELULAR_USU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CORREO_ELECTRONICO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORREO_ELECTRONICO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_CIUDAD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
