@@ -57,13 +57,13 @@ namespace _SERVICE_MARKET_.Controllers
                 cmd.Parameters.AddWithValue("N_IDENTIFICACION", oUsuarios.N_IDENTIFICACION);
                 cmd.Parameters.AddWithValue("FECHA_NACIMIENTO", oUsuarios.FECHA_NACIMIENTO);
                 cmd.Parameters.AddWithValue("FECHA_EXPEDICION", oUsuarios.FECHA_EXPEDICION);
-                cmd.Parameters.AddWithValue("NOMBRE_USU", oUsuarios.NOMBRE_USU.ToUpper());
-                cmd.Parameters.AddWithValue("APELLIDOS_USU", oUsuarios.APELLIDOS_USU.ToUpper());
+                cmd.Parameters.AddWithValue("NOMBRE_USU", oUsuarios.NOMBRE_USU);
+                cmd.Parameters.AddWithValue("APELLIDOS_USU", oUsuarios.APELLIDOS_USU);
                 cmd.Parameters.AddWithValue("CELULAR_USU", oUsuarios.CELULAR_USU);
                 cmd.Parameters.AddWithValue("GENERO", oUsuarios.GENERO);
                 cmd.Parameters.AddWithValue("ID_CIUDAD_FK", oUsuarios.ID_CIUDAD_FK);
-                cmd.Parameters.AddWithValue("DIRECCION", oUsuarios.DIRECCION.ToUpper());
-                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO", oUsuarios.CORREO_ELECTRONICO.ToUpper());
+                cmd.Parameters.AddWithValue("DIRECCION", oUsuarios.DIRECCION);
+                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO", oUsuarios.CORREO_ELECTRONICO);
                 cmd.Parameters.AddWithValue("CONTRASENA", oUsuarios.CONTRASENA);
                 cmd.Parameters.Add("REGISTRADO", SqlDbType.Bit).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("MENSAJE", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;

@@ -141,6 +141,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Css\Acceso.css" />
     <Content Include="Content\Css\Index.css" />
+    <Content Include="Content\Css\informacionPublicaciones.css" />
     <Content Include="Content\Css\Layout.css" />
     <Content Include="Content\Css\IndexUsuarios.css" />
     <Content Include="Content\Css\PQR.css" />
@@ -158,15 +159,19 @@
     <Content Include="Imagenes\gorjeo.png" />
     <Content Include="Imagenes\instagram.png" />
     <Content Include="Imagenes\Limpieza.jpg" />
+    <Content Include="Imagenes\limpiezac1.jpg" />
     <Content Include="Imagenes\limpiezaCarousel.jpg" />
     <Content Include="Imagenes\mantenimiento.jpg" />
+    <Content Include="Imagenes\mantenimientoc2.jpg" />
     <Content Include="Imagenes\mantenimientoCarros.jpg" />
     <Content Include="Imagenes\mantenimientopcCarousel.jpg" />
     <Content Include="Imagenes\Peluqueria.jpg" />
     <Content Include="Imagenes\peluqueria3.jpg" />
+    <Content Include="Imagenes\remodelacionc3.jpg" />
     <Content Include="Imagenes\remodelacionCarousel.jpg" />
     <Content Include="Imagenes\remodelación.jpg" />
     <Content Include="Imagenes\reparacion2.jpg" />
+    <Content Include="Imagenes\salud y bellezac4.jpg" />
     <Content Include="Imagenes\salud.jpg" />
     <Content Include="Imagenes\saludCarousel.jpg" />
     <Content Include="Imagenes\Trabajo-domestico.jpg" />

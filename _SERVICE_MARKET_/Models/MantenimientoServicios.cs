@@ -75,8 +75,6 @@ namespace _SERVICE_MARKET_.Models
                 oDetalle_Servicios.DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString();
                 oDetalle_Servicios.TERMINOS_SER = reader["TERMINOS_SER"].ToString();
                 oDetalle_Servicios.NOMBRE_CAT = reader["NOMBRE_CAT"].ToString();
-                oDetalle_Servicios.FECHA_INICIO = reader["FECHA_INICIO"].ToString();
-                oDetalle_Servicios.ESTADO_DS = reader["ESTADO_DS"].ToString();
                 oDetalle_Servicios.NOMBRE_USU = reader["NOMBRE_USU"].ToString();
                 oDetalle_Servicios.APELLIDOS_USU = reader["APELLIDOS_USU"].ToString();
                 oDetalle_Servicios.CELULAR_USU = reader["CELULAR_USU"].ToString();

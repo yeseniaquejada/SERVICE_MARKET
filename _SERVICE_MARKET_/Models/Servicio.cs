@@ -18,15 +18,7 @@ namespace _SERVICE_MARKET_.Models
         public int ID_CATEGORIA_FK { get; set; }
 
         /*CATEGORIAS*/
-        public int ID_CATEGORIA { get; set; }
         public string NOMBRE_CAT { get; set; }
-        public string DESCRIPCION_CAT { get; set; }
-
-        /*DETALLE_SERVICIOS*/
-        public int ID_SERVICIO_FK { get; set; }
-        public string IDENTIFICACION_U_FK { get; set; }
-        public string FECHA_INICIO { get; set; }
-        public string ESTADO_DS { get; set; }
 
         /*USUARIO*/
         public string NOMBRE_USU { get; set; }

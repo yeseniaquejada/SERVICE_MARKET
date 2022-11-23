@@ -24,5 +24,10 @@ namespace _SERVICE_MARKET_.Controllers
         {
             return View();
         }
+
+        public ActionResult Caegorias()
+        {
+            return View();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<_SERVICE_MARKET_.Models.Servicio>
 
 @{
-    ViewBag.Title = "Servicios Disponibles";
+    ViewBag.Title = "Servicios disponibles";
     Layout = "~/Views/Shared/Layout_CP.cshtml";
 }
 
@@ -84,7 +84,7 @@
                                 <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>  
                             </div>
                             <div class="botonInfo">
-                                <button type="submit" class="btn btn-primary text-decoration-none">@Html.ActionLink("Más información", "informacionPublicaciones", new { ID = item.ID_SERVICIO }, new {@class = "text-decoration-none text-light"}) </button>
+                                <button type="submit" class="btn btn-primary text-decoration-none">@Html.ActionLink("Más información", "informacionPublicaciones", new { ID = item.ID_SERVICIO }, new {@class = "text-decoration-none text-light"})</button>
                             </div>
                         </div>
                     </div>
