@@ -92,7 +92,9 @@
         </div>
     </section>
 
-    @Html.ActionLink("Volver al inicio", "Index", "Home", new { }, new { @class = "btn btn-outline-primary", style = "font-size:20px; height: 40px; text-decoration: none; margin-top: 25px; margin-left: 40%; transform: translateX(40%);" })
+    <div class="d-grid gap-2 col-6 mx-auto d-block">
+        <a href="@Url.Action("Index", "Home")" class="volver btn btn-outline-primary">Volver al inicio</a>
+    </div>
 
     <script>
         function masInformacion() {
