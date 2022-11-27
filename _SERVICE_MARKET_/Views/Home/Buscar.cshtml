@@ -1,0 +1,112 @@
+﻿@model IEnumerable<_SERVICE_MARKET_.Models.Servicio>
+
+@{
+    ViewBag.Title = "Buscar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Buscar</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_SERVICIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_SER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRECIO_SER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_BREVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TERMINOS_SER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_CATEGORIA_FK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_CATEGORIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_CAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_CAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_USU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDOS_USU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CELULAR_USU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CORREO_ELECTRONICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_CIUDAD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_SERVICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_SER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRECIO_SER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TERMINOS_SER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_CATEGORIA_FK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_CATEGORIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_CAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION_CAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_USU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDOS_USU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CELULAR_USU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CORREO_ELECTRONICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_CIUDAD)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -85,27 +85,32 @@ namespace _SERVICE_MARKET_.Models
             return oDetalle_Servicios;
         }
 
-        //METODO PARA CATEGORIZAR SERVICIOS
-
-        public Servicio CategorizarServicios(int ID_CATEGORIA)
+        //METODO PARA BUSCAR SERVICIOS
+        public List<Servicio> BuscarServicios(string NOMBRE_SER)
         {
             cadena.Open();
-            SqlCommand Comand = new SqlCommand("SERVICIOS_CATEGORIAS", cadena as SqlConnection);
-            Comand.Parameters.Add("@ID_CATEGORIA", SqlDbType.Int);
-            Comand.Parameters["@ID_CATEGORIA"].Value = ID_CATEGORIA;
+            List<Servicio> lista = new List<Servicio>();
+            SqlCommand Comand = new SqlCommand("BUSQUEDAD_SERVICIOS", cadena as SqlConnection);
+            Comand.Parameters.Add("@NOMBRE_SER", SqlDbType.VarChar);
+            Comand.Parameters["@NOMBRE_SER"].Value = '%' + NOMBRE_SER + '%';
             Comand.CommandType = CommandType.StoredProcedure;
             SqlDataReader reader = Comand.ExecuteReader();
-            Servicio categorizar = new Servicio();
-            if (reader.Read())
+
+            while (reader.Read())
             {
-                categorizar.ID_CATEGORIA = int.Parse(reader["ID_CATEGORIA"].ToString());
-                categorizar.ID_SERVICIO = int.Parse(reader["ID_SERVICIO"].ToString());
-                categorizar.NOMBRE_SER = reader["NOMBRE_SER"].ToString();
-                categorizar.PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString());
-                categorizar.DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString();
-                categorizar.NOMBRE_CAT = reader["NOMBRE_CAT"].ToString();
+                Servicio oServicios = new Servicio
+                {
+                    ID_SERVICIO = int.Parse(reader["ID_SERVICIO"].ToString()),
+                    NOMBRE_SER = reader["NOMBRE_SER"].ToString(),
+                    PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString()),
+                    DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString(),
+                    NOMBRE_CAT = reader["NOMBRE_CAT"].ToString()
+                };
+                lista.Add(oServicios);
             }
             cadena.Close();
-            return categorizar;
+            return lista;
         }
+
+    }
 }
