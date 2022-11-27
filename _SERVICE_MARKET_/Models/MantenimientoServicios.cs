@@ -84,5 +84,28 @@ namespace _SERVICE_MARKET_.Models
             cadena.Close();
             return oDetalle_Servicios;
         }
-    }
+
+        //METODO PARA CATEGORIZAR SERVICIOS
+
+        public Servicio CategorizarServicios(int ID_CATEGORIA)
+        {
+            cadena.Open();
+            SqlCommand Comand = new SqlCommand("SERVICIOS_CATEGORIAS", cadena as SqlConnection);
+            Comand.Parameters.Add("@ID_CATEGORIA", SqlDbType.Int);
+            Comand.Parameters["@ID_CATEGORIA"].Value = ID_CATEGORIA;
+            Comand.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = Comand.ExecuteReader();
+            Servicio categorizar = new Servicio();
+            if (reader.Read())
+            {
+                categorizar.ID_CATEGORIA = int.Parse(reader["ID_CATEGORIA"].ToString());
+                categorizar.ID_SERVICIO = int.Parse(reader["ID_SERVICIO"].ToString());
+                categorizar.NOMBRE_SER = reader["NOMBRE_SER"].ToString();
+                categorizar.PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString());
+                categorizar.DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString();
+                categorizar.NOMBRE_CAT = reader["NOMBRE_CAT"].ToString();
+            }
+            cadena.Close();
+            return categorizar;
+        }
 }

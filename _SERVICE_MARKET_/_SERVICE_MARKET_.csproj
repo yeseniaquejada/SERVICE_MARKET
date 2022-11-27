@@ -220,6 +220,7 @@
     <Content Include="Views\Servicios\preguntasFrecuentes.cshtml" />
     <Content Include="Views\Servicios\PQR.cshtml" />
     <Content Include="Views\Servicios\informacionPublicaciones.cshtml" />
+    <Content Include="Views\Home\Categorias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
