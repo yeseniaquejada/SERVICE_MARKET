@@ -24,10 +24,11 @@ namespace _SERVICE_MARKET_.Controllers
         {
             return View();
         }
-
-        public ActionResult Caegorias()
+        public ActionResult Categorias(int ID)
         {
-            return View();
+            MantenimientoServicios ma = new MantenimientoServicios();
+            Servicio ser = ma.CategorizarServicios(ID);
+            return View(ser);
         }
     }
 }
