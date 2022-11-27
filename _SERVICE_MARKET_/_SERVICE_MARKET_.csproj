@@ -140,6 +140,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Css\Acceso.css" />
+    <Content Include="Content\Css\Buscar.css" />
     <Content Include="Content\Css\Index.css" />
     <Content Include="Content\Css\informacionPublicaciones.css" />
     <Content Include="Content\Css\Layout.css" />
