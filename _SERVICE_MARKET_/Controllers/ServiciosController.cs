@@ -1,9 +1,4 @@
 ﻿using _SERVICE_MARKET_.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace _SERVICE_MARKET_.Controllers
@@ -33,7 +28,6 @@ namespace _SERVICE_MARKET_.Controllers
             MantenimientoServicios ma = new MantenimientoServicios();
             Servicio oServicios = new Servicio
             {
-                ID_SERVICIO = int.Parse(collection["ID_SERVICIO"].ToString()),
                 NOMBRE_SER = collection["NOMBRE_SER"],
                 PRECIO_SER = decimal.Parse(collection["PRECIO_SER"].ToString()),
                 DESCRIPCION_BREVE = collection["DESCRIPCION_BREVE"],

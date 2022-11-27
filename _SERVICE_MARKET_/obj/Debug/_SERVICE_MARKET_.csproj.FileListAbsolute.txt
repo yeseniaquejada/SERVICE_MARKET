@@ -60,8 +60,8 @@ C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.csproj.AssemblyReference.cache
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.csproj.CoreCompileInputs.cache
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.csproj.CopyComplete
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.dll
 C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.pdb
+C:\Users\Yesenia\Documents\YESENIA\CLASES DEL SENA\PROYECTO_SENA\_SERVICE_MARKET_\obj\Debug\_SERVICE_MARKET_.csproj.AssemblyReference.cache

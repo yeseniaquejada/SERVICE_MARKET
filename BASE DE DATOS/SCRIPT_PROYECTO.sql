@@ -481,9 +481,6 @@ BEGIN
 	VALUES (@NOMBRE_SER,@PRECIO_SER,@DESCRIPCION_BREVE,@TERMINOS_SER,@ID_CATEGORIA_FK)
 END
 
-EXEC CREAR_SERVICIOS 'Depilación de cejas con cera',24000,'Cuidado de tus cejas y la forma natural que ya tienen, para depilarlas se usa cera tipo miel caliente en la zona.',
-'Previamente indicar si sufre algún tipo de alergia a picaduras de abejas y/o intolerancia a la miel, ya que el producto de depilación contiene estos derivados.',4
-
 /*PROCEDIMIENTO ALMACENADO PARA LEER REGISTROS DE LA TABLA SERVICIOS */
 CREATE PROCEDURE LEER_SERVICIOS
 AS
@@ -638,7 +635,7 @@ FROM SERVICIOS
 SELECT * FROM SERVICIOS_V
 INSERT INTO SERVICIOS_V(NOMBRE_SER, PRECIO_SER, DESCRIPCION_BREVE,TERMINOS_SER, ID_CATEGORIA_FK) VALUES ('Limpieza de casas',90000,'Solo se realiza aseo en areas comunes', 'No se plancha, ni cocina, no se cuidan adultos mayores.',2)
 UPDATE SERVICIOS_V SET PRECIO_SER =  120000 WHERE ID_SERVICIO = 2
-DELETE FROM SERVICIOS_V WHERE ID_SERVICIO = 2
+DELETE FROM SERVICIOS_V WHERE ID_SERVICIO = 1
 
 /*REINICIAR CONTADOR DEL ID*/
 DBCC CHECKIDENT (SERVICIOS, RESEED, 0)
