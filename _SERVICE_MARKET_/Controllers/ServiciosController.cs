@@ -1,4 +1,5 @@
 ﻿using _SERVICE_MARKET_.Models;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace _SERVICE_MARKET_.Controllers
@@ -53,6 +54,12 @@ namespace _SERVICE_MARKET_.Controllers
             MantenimientoServicios ma = new MantenimientoServicios();
             Servicio ser = ma.Informacion_Servicios(ID);
             return View(ser);
+        }
+        public ActionResult BuscarSer(string NOMBRE_SER)
+        {
+            MantenimientoServicios ma = new MantenimientoServicios();
+            List<Servicio> lista = ma.BuscarServicios(NOMBRE_SER);
+            return View(lista);
         }
     }
 }

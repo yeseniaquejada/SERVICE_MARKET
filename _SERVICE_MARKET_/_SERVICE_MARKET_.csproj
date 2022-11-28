@@ -222,6 +222,7 @@
     <Content Include="Views\Servicios\PQR.cshtml" />
     <Content Include="Views\Servicios\informacionPublicaciones.cshtml" />
     <Content Include="Views\Home\Buscar.cshtml" />
+    <Content Include="Views\Servicios\BuscarSer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
