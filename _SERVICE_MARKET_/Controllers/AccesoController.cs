@@ -34,10 +34,10 @@ namespace _SERVICE_MARKET_.Controllers
             string mensaje;
 
             /*COMPARANDO CONTRASEÑAS*/
-            if (oUsuarios.CONTRASENA == oUsuarios.CONFIRMAR_CONTRASENA)
+            if (oUsuarios.CONTRASENA_USU == oUsuarios.CONFIRMAR_CONTRASENA)
             {
                 /*ENCRIPTANDO CONTRASEÑA*/
-                oUsuarios.CONTRASENA = ConvertirSha256(oUsuarios.CONTRASENA);
+                oUsuarios.CONTRASENA_USU = ConvertirSha256(oUsuarios.CONTRASENA_USU);
             }
             else
             {
@@ -50,18 +50,18 @@ namespace _SERVICE_MARKET_.Controllers
             {
                 /*PROCEDIMIENTO ALMACENADO REGISTRAR USUARIO*/
                 SqlCommand cmd = new SqlCommand("REGISTRAR_USUARIO", cn);
-                cmd.Parameters.AddWithValue("TIPO_DOC", oUsuarios.TIPO_DOC);
-                cmd.Parameters.AddWithValue("N_IDENTIFICACION", oUsuarios.N_IDENTIFICACION);
-                cmd.Parameters.AddWithValue("FECHA_NACIMIENTO", oUsuarios.FECHA_NACIMIENTO);
-                cmd.Parameters.AddWithValue("FECHA_EXPEDICION", oUsuarios.FECHA_EXPEDICION);
+                cmd.Parameters.AddWithValue("TIPO_DOC_USU", oUsuarios.TIPO_DOC_USU);
+                cmd.Parameters.AddWithValue("N_IDENTIFICACION_USU", oUsuarios.N_IDENTIFICACION_USU);
+                cmd.Parameters.AddWithValue("FECHA_NACIMIENTO_USU", oUsuarios.FECHA_NACIMIENTO_USU);
+                cmd.Parameters.AddWithValue("FECHA_EXPEDICION_USU", oUsuarios.FECHA_EXPEDICION_USU);
                 cmd.Parameters.AddWithValue("NOMBRE_USU", oUsuarios.NOMBRE_USU);
                 cmd.Parameters.AddWithValue("APELLIDOS_USU", oUsuarios.APELLIDOS_USU);
                 cmd.Parameters.AddWithValue("CELULAR_USU", oUsuarios.CELULAR_USU);
-                cmd.Parameters.AddWithValue("GENERO", oUsuarios.GENERO);
+                cmd.Parameters.AddWithValue("GENERO_USU", oUsuarios.GENERO_USU);
                 cmd.Parameters.AddWithValue("ID_CIUDAD_FK", oUsuarios.ID_CIUDAD_FK);
-                cmd.Parameters.AddWithValue("DIRECCION", oUsuarios.DIRECCION);
-                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO", oUsuarios.CORREO_ELECTRONICO);
-                cmd.Parameters.AddWithValue("CONTRASENA", oUsuarios.CONTRASENA);
+                cmd.Parameters.AddWithValue("DIRECCION_USU", oUsuarios.DIRECCION_USU);
+                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO_USU", oUsuarios.CORREO_ELECTRONICO_USU);
+                cmd.Parameters.AddWithValue("CONTRASENA_USU", oUsuarios.CONTRASENA_USU);
                 cmd.Parameters.Add("REGISTRADO", SqlDbType.Bit).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("MENSAJE", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -91,24 +91,24 @@ namespace _SERVICE_MARKET_.Controllers
         public ActionResult Login(Usuario oUsuarios)
         {
             /*ENCRIPTANDO CONTRASEÑA*/
-            oUsuarios.CONTRASENA = ConvertirSha256(oUsuarios.CONTRASENA);
+            oUsuarios.CONTRASENA_USU = ConvertirSha256(oUsuarios.CONTRASENA_USU);
 
             /*CONECTANDO BASE DE DATOS*/
             using (SqlConnection cn = new SqlConnection(cadena))
             {
                 /*PROCEDIMIENTO ALMACENADO VALIDAR USUARIO*/
                 SqlCommand cmd = new SqlCommand("VALIDAR_USUARIO", cn);
-                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO", oUsuarios.CORREO_ELECTRONICO);
-                cmd.Parameters.AddWithValue("CONTRASENA", oUsuarios.CONTRASENA);
+                cmd.Parameters.AddWithValue("CORREO_ELECTRONICO_USU", oUsuarios.CORREO_ELECTRONICO_USU);
+                cmd.Parameters.AddWithValue("CONTRASENA_USU", oUsuarios.CONTRASENA_USU);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
 
                 /*LEER IDENTIFICACION DEL USUARIO (PRIMERA FILA)*/
-                oUsuarios.N_IDENTIFICACION = cmd.ExecuteScalar().ToString();
+                oUsuarios.N_IDENTIFICACION_USU = cmd.ExecuteScalar().ToString();
             }
 
             /*ACCESO A VISTAS*/
-            if (oUsuarios.N_IDENTIFICACION != "0")
+            if (oUsuarios.N_IDENTIFICACION_USU != "0")
             {
                 Session["Usuario"] = oUsuarios;
                 return RedirectToAction("IndexUsuarios", "Servicios");

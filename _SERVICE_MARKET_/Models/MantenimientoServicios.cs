@@ -20,6 +20,13 @@ namespace _SERVICE_MARKET_.Models
             Comand.Parameters.Add(new SqlParameter("@DESCRIPCION_BREVE", oServicios.DESCRIPCION_BREVE));
             Comand.Parameters.Add(new SqlParameter("@TERMINOS_SER", oServicios.TERMINOS_SER));
             Comand.Parameters.Add(new SqlParameter("@ID_CATEGORIA_FK", oServicios.ID_CATEGORIA_FK));
+
+            /*LEER IDENTIFICACION DEL USUARIO (PRIMERA FILA)
+             * , Usuario oUsuarios
+             oUsuarios.N_IDENTIFICACION = Comand.ExecuteScalar().ToString();
+             */
+
+
             int Publicacion = Comand.ExecuteNonQuery();
             cadena.Close();
             return Publicacion;
