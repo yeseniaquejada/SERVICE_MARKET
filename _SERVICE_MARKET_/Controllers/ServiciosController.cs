@@ -35,7 +35,9 @@ namespace _SERVICE_MARKET_.Controllers
                 TERMINOS_SER = collection["TERMINOS_SER"],
                 ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"])
             };
+#pragma warning disable CS7036 // No se ha dado ningún argumento que corresponda al parámetro formal requerido 'oUsuarios' de 'MantenimientoServicios.AgregarServicio(Servicio, Usuario)'
             ma.AgregarServicio(oServicios);
+#pragma warning restore CS7036 // No se ha dado ningún argumento que corresponda al parámetro formal requerido 'oUsuarios' de 'MantenimientoServicios.AgregarServicio(Servicio, Usuario)'
             return RedirectToAction("ServiciosDisponibles");
         }
 

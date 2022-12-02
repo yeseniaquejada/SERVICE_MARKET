@@ -19,14 +19,8 @@ namespace _SERVICE_MARKET_.Models
             Comand.Parameters.Add(new SqlParameter("@PRECIO_SER", oServicios.PRECIO_SER));
             Comand.Parameters.Add(new SqlParameter("@DESCRIPCION_BREVE", oServicios.DESCRIPCION_BREVE));
             Comand.Parameters.Add(new SqlParameter("@TERMINOS_SER", oServicios.TERMINOS_SER));
+            Comand.Parameters.Add(new SqlParameter("@N_IDENTIFICACION_USU_FK", oServicios.N_IDENTIFICACION_USU));
             Comand.Parameters.Add(new SqlParameter("@ID_CATEGORIA_FK", oServicios.ID_CATEGORIA_FK));
-
-            /*LEER IDENTIFICACION DEL USUARIO (PRIMERA FILA)
-             * , Usuario oUsuarios
-             oUsuarios.N_IDENTIFICACION = Comand.ExecuteScalar().ToString();
-             */
-
-
             int Publicacion = Comand.ExecuteNonQuery();
             cadena.Close();
             return Publicacion;
@@ -75,11 +69,12 @@ namespace _SERVICE_MARKET_.Models
                 oDetalle_Servicios.PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString());
                 oDetalle_Servicios.DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString();
                 oDetalle_Servicios.TERMINOS_SER = reader["TERMINOS_SER"].ToString();
+                oDetalle_Servicios.TIPO = reader["TIPO"].ToString();
                 oDetalle_Servicios.NOMBRE_CAT = reader["NOMBRE_CAT"].ToString();
+                oDetalle_Servicios.N_IDENTIFICACION_USU = reader["N_IDENTIFICACION_USU"].ToString();
                 oDetalle_Servicios.NOMBRE_USU = reader["NOMBRE_USU"].ToString();
                 oDetalle_Servicios.APELLIDOS_USU = reader["APELLIDOS_USU"].ToString();
                 oDetalle_Servicios.CELULAR_USU = reader["CELULAR_USU"].ToString();
-                oDetalle_Servicios.CORREO_ELECTRONICO = reader["CORREO_ELECTRONICO"].ToString();
                 oDetalle_Servicios.NOMBRE_CIUDAD = reader["NOMBRE_CIUDAD"].ToString();
             }
             cadena.Close();

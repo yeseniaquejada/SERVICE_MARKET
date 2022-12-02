@@ -22,6 +22,7 @@ EXEC CREAR_CIUDAD 'Caldas'
 EXEC CREAR_CIUDAD 'Barbosa'
 EXEC CREAR_CIUDAD 'Sabaneta'
 EXEC CREAR_CIUDAD 'La estrella'
+
 EXEC CREAR_CIUDAD 'Itagui'
 EXEC CREAR_CIUDAD 'Envigado'
 EXEC CREAR_CIUDAD 'Bello'
@@ -468,10 +469,13 @@ AS
 BEGIN
 	INSERT INTO SERVICIOS(NOMBRE_SER,PRECIO_SER,DESCRIPCION_BREVE,TERMINOS_SER,TIPO,ID_CATEGORIA_FK) 
 	VALUES (@NOMBRE_SER,@PRECIO_SER,@DESCRIPCION_BREVE,@TERMINOS_SER,@TIPO,@ID_CATEGORIA_FK)
+	SELECT N_IDENTIFICACION_USU FROM USUARIOS WHERE N_IDENTIFICACION_USU = @N_IDENTIFICACION_USU_FK
 END
 
 EXEC CREAR_SERVICIOS 'limpieza a vapor baños y cocina',97000,'Quitamos la grasa y gérmenes con equipos y productos especializados, removiendo grasas y desinfectando a profundidad los espacios. Usamos productos amigables con el medio ambiente.','Al tomar el servicio, debes tener los espacios desocupados para el servicio especialmente las alacenas de las cocinas y cajones con el fin de evitar cualquier daño y alterar el tiempo del servicio. Te recomendamos hacer este tipo de limpieza profunda cada 3-6 meses.','Publicacion','1001228354', 2
-
+EXEC CREAR_SERVICIOS 'Peluquería',50000,'Realizamos todo tipo de trabajos técnicos de peluquería tanto para mujeres, hombres o niños.Ofrecemos un trato personal y te asesoraremos en todo lo que necesites.','Entre nuestra cartera de servicios, se pueden encontrar: cortes, mechas, puntos de color, balayages, peinados, recogidos, alisados, permanentes. Utilizamos productos naturales, muy demandados actualmente entre nuestros clientes.','Publicacion','31793795', 2
+SELECT * FROM CATEGORIAS
+EXEC CREAR_SERVICIOS 'Peluquería',50000,'','','Publicacion','1001228354', 2
 /*PROCEDIMIENTO ALMACENADO PARA LEER REGISTROS DE LA TABLA SERVICIOS */
 CREATE PROCEDURE LEER_SERVICIOS
 AS
